@@ -5,6 +5,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductComponent } from './product/product.component';
 import { Error404Component } from './error404/error404.component';
 import { FrontRoutingModule } from './front-routing.module';
+import { MaterialModule } from '../material.module';
 
 
 
@@ -12,7 +13,8 @@ import { FrontRoutingModule } from './front-routing.module';
   declarations: [FrontComponent, ProductsComponent, ProductComponent, Error404Component],
   imports: [
     CommonModule,
-    FrontRoutingModule
+    FrontRoutingModule,
+    MaterialModule
   ],
   exports: [FrontComponent, ProductsComponent, ProductComponent, Error404Component]
 })

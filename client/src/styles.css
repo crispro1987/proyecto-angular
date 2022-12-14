@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     --grey1: #c7c6c6;
-    --grey2: #efefefbd;
+    --grey2: #e7e7e7bd;
+    --grey3: #f1f1f1bd;
+    --grey4: #55595c;
 }
 
 html, body { height: 100%; }

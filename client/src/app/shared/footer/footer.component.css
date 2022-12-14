@@ -1,0 +1,27 @@
+.footer{
+    background: var(--grey4);
+    color:white;
+    padding:2em;
+}
+
+.footer h3{
+    color:white;
+    text-transform: initial;
+    letter-spacing: unset;
+}
+
+.forma{
+    padding:1em;
+    background-color: var(--grey2);
+    border-radius:5px;
+}
+
+@media (min-width:767px) {
+    .footer{
+        padding:3em;
+    }
+
+    .forma{
+        padding:2em;
+    }
+}

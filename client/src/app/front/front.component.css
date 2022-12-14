@@ -47,30 +47,33 @@
 
 /** SECCION PRODUCTS */
 
-.products .box{
-    padding-top:2em;
+.products{
+    background-color: var(--grey3);
+    padding: 2em 0;
 }
 
-.box-texto{
+.mat-card{
+    font-family:'Lexend Deca', sans-serif !important;
+}
+
+.mat-card-header .mat-card-title{
+    font-size:1rem !important;
+}
+
+.example-card {
+    max-width: 400px;
+}
+
+.box{
     padding:1em;
 }
-
-.box-texto h5{
-    text-transform: initial;
-    letter-spacing: unset;
-    padding:0;
-}
-
-.box-texto p{
-    margin:0;
-}
-
-.box-texto .price{
+  
+.price{
     font-weight: 400;
     font-size: 1.5rem;
 }
 
-.box-texto .price small{
+.price small{
     text-decoration: line-through;
     opacity:.8;
 }

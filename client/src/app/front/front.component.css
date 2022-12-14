@@ -1,0 +1,115 @@
+.pad-home{
+    padding: 4.8em 0 0 0;
+    position: relative;
+}
+
+.texto-home{
+    position:absolute;
+    bottom:0;
+    padding:1em;
+}
+
+.texto-home h1{
+    text-transform: initial;
+    letter-spacing: unset;
+    color:white;
+    font-family: 'Abril Fatface', cursive;
+    font-weight: 100;
+}
+
+.texto-home p{
+    font-size: 1rem;
+    font-weight: 300;
+    padding:1em 1em 0em 1em;
+    text-align: center;
+}
+
+/** SECCION SEARCH */
+
+.search{
+    margin-top:2em;
+    background-color:var(--grey2);
+    padding:1em;
+}
+
+.search h2{
+    text-transform: initial;
+    letter-spacing: unset;
+}
+
+.search input{
+    width:100%;
+    border-radius:10px;
+    padding:.7em;
+    border: none;
+    margin-top:1em;
+}
+
+/** SECCION PRODUCTS */
+
+.products .box{
+    padding-top:2em;
+}
+
+.box-texto{
+    padding:1em;
+}
+
+.box-texto h5{
+    text-transform: initial;
+    letter-spacing: unset;
+    padding:0;
+}
+
+.box-texto p{
+    margin:0;
+}
+
+.box-texto .price{
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.box-texto .price small{
+    text-decoration: line-through;
+    opacity:.8;
+}
+
+@media (min-width:767px) {
+
+    .pad-home{
+        padding: 4em 0 0 0;
+    }
+
+    .texto-home{
+        width: 600px;
+        margin-left:5em;
+    }
+
+    .texto-home h1{
+        font-size: 2.5rem;
+        padding-bottom:1.5em;
+    }
+
+    .texto-home p{
+        font-size: 1.5rem;
+        padding:1em;
+    }
+
+    /** SEARCH */
+
+    .search{
+        padding:2em
+    }
+
+    .search input,
+    .search h2{
+        margin:0;
+    }
+
+    /** PRODUCTS */
+
+    .products{
+        padding:5em;
+    }
+}

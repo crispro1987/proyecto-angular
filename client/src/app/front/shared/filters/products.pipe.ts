@@ -16,8 +16,15 @@ export class ProductsPipe implements PipeTransform {
     let filtered = value;
 
     if(search){
+
+      /** Primero eliminamos acentos y caracteres especiales y luego filtramos la palabra de search en arreglo de productos proveniente de la base de datos */
+
+      search = search.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       filtered = value.filter(prod => prod.tag_course.includes(search));
+
     }
+
+    /** Páginas para paginación */
 
     let pag1 = filtered.length / 8;
     let pages = Math.ceil(pag1);

@@ -13,6 +13,7 @@ import { FrontModule } from './front/front.module';
 
 import { MaterialModule } from './material.module';
 import { InterceptorService } from './shared/services/interceptor.service';
+import { CartModule } from './shared/cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { InterceptorService } from './shared/services/interceptor.service';
     FormsModule,
     HttpClientModule,
     NavbarModule,
+    CartModule,
     FooterModule,
     FrontModule,
     BrowserAnimationsModule,

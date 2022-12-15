@@ -1,0 +1,14 @@
+.menu-r{
+    position:fixed;
+    width:400px;
+    height: 100vh;
+    top:0;
+    right: -400px;
+    z-index:998;
+    background: var(--grey3);
+    transition: all ease-in .5s;
+}
+
+.menu-r-fix{
+    right: 0;
+}

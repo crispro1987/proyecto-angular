@@ -2,6 +2,8 @@
     background: var(--grey4);
     color:white;
     padding:2em;
+    position:relative;
+    z-index: 999;
 }
 
 .footer h3{
@@ -10,10 +12,25 @@
     letter-spacing: unset;
 }
 
-.forma{
+.forma,
+.forma2{
     padding:1em;
     background-color: var(--grey2);
     border-radius:5px;
+    color: black;
+}
+
+.forma2{
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 300;
+}
+
+.tec span{
+    font-weight: 400;
 }
 
 @media (min-width:767px) {

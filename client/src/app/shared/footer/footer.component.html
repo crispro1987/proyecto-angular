@@ -1,35 +1,52 @@
 <div class="container-fluid footer">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-4 align-self-center me-md-4">
+        <div class="col-12 col-md-4 align-self-center me-md-4 tec">
             <h3>Conviértete en instructor</h3>
             <p>Instructores de todo el mundo enseñan a millones de estudiantes en Cursoide. Proporcionamos las herramientas y las habilidades para que enseñes lo que te apasiona.</p>
+            <hr>
+            <p>Nombre: <span>{{instName | titlecase}} {{instSurname | titlecase}}</span></p>
+            <p>Email: <span>{{instEmail}}</span></p>
         </div>
-        <div class="col-12 col-md-4">
-            <form>
+        <div class="col-12 col-md-4" *ngIf="!send">
+            <form [formGroup]="instForm" (ngSubmit)="addInstructor()">
                 <div class="row forma">
                     <div class="col-12">
                         <mat-form-field appearance="fill" class="w-100">
                             <mat-label>Nombre</mat-label>
-                            <input matInput>
+                            <input matInput
+                                   formControlName="name"
+                                   [class.form-inv]="namePattern || nameRequired">
+                            <mat-hint *ngIf="namePattern" class="invalid">No escriba caracteres especiales</mat-hint>
+                            <mat-hint *ngIf="nameRequired" class="invalid">Este campo es requerido</mat-hint>
                         </mat-form-field>
                     </div>
                     <div class="col-12">
                         <mat-form-field appearance="fill" class="w-100">
                             <mat-label>Apellidos</mat-label>
-                            <input matInput>
+                            <input matInput
+                                   formControlName="surname"[class.form-inv]="surnamePattern || surnameRequired">
+                            <mat-hint *ngIf="surnamePattern" class="invalid">No escriba caracteres especiales</mat-hint>
+                            <mat-hint *ngIf="surnameRequired" class="invalid">Este campo es requerido</mat-hint>
                         </mat-form-field>
                     </div>
                     <div class="col-12">
                         <mat-form-field appearance="fill" class="w-100">
                             <mat-label>Email</mat-label>
-                            <input matInput>
+                            <input matInput
+                                   formControlName="email"
+                                   [class.form-inv]="emailPattern || emailRequired">
+                            <mat-hint *ngIf="emailPattern" class="invalid">Ingrese email correcto</mat-hint>
+                            <mat-hint *ngIf="emailRequired" class="invalid">Este campo es requerido</mat-hint>
                         </mat-form-field>
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-success w-100">ENVIAR</button>
+                        <button type="submit" class="btn btn-success w-100">ENVIAR</button>
                     </div>
                 </div>
             </form>
+        </div>
+        <div class="col-12 col-md-4 forma2" *ngIf="send">
+            <p>Instructor enviado de forma exitosa. Uno de nuestros ejecutivos se contactará a la brevedad posible.</p>
         </div>
     </div>
 </div>

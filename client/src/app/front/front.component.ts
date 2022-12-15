@@ -38,16 +38,9 @@ export class FrontComponent implements OnInit {
   }
 
   readCourses(){
-    Swal.fire({
-      allowOutsideClick: false,
-      icon: 'info',
-      text: 'Cargando Cursos',
-    });
-    Swal.showLoading();
 
     this.apiService.readAll('courses').subscribe( resp => {
       if(resp.results != 'Not Found'){
-        Swal.close();
         this.courses = resp.results;
       }
     })

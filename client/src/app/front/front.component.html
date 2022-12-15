@@ -48,7 +48,11 @@
         </mat-card-actions>
       </mat-card>
     </div>
-
+    <div class="col-11 text-center no-muestra-start" *ngIf="(courses | products:page:search).length == 0">
+      <div class="no-muestra">
+          No hay cursos que mostrar con el lenguaje "{{search}}"
+      </div>
+  </div>
   </div>
   <div class="row justify-content-center mb-5 mt-5" *ngIf="courses.length != 0">
     <div class="col-12 col-lg-6 text-center">

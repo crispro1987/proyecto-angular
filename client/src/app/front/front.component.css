@@ -78,6 +78,11 @@
     opacity:.8;
 }
 
+.no-muestra{
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
 .nmberPag{
     padding:10px;
     width:40px;

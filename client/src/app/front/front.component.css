@@ -107,6 +107,20 @@
 
 @media (min-width:767px) {
 
+    .texto-home{
+        width: 400px;
+        margin-left:5em;
+    }
+
+    .texto-home h1{
+        font-size: 2rem;
+        padding-bottom:.8em;
+    }
+
+}
+
+@media (min-width:1220px) {
+
     .pad-home{
         padding: 4em 0 0 0;
     }

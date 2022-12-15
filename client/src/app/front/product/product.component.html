@@ -1,11 +1,12 @@
 <div class="container-fluid">
     <div class="row justify-content-center pad-prod">
         <div class="col-11 col-md-4 align-self-center">
-            <h2>Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL</h2>
-            <p>Juan La Torre Valdes</p>
+            <h2>{{product.title_course}}</h2>
+            <p>{{product.instructor_course}}</p>
             <div class="row">
+                <div class="col-12 d-none d-md-block short">{{product.short_course}}</div>
                 <div class="col-6 prod-price align-self-center d-none d-md-block">
-                    <p class="price">$9900 <small>$10960</small> </p>
+                    <p class="price">{{product.value_course}} <small>{{product.value_offer_course}}</small> </p>
                 </div>
                 <div class="col-6">
                     <button class="btn btn-outline-success d-none d-md-block">Agregar a carrito</button>
@@ -13,13 +14,13 @@
             </div>
         </div>
         <div class="col-11 col-md-4">
-            <img src="../../../assets/img/img1.png" class="w-100" alt="">
+            <img src="{{product.image_course}}" class="w-100" alt="{{product.alt_course}}">
         </div>
     </div>
     
     <div class="row justify-content-center d-md-none">
         <div class="col-11 prod-price align-self-center text-center p-3">
-            <p class="price">$9900 <small>$10960</small> </p>
+            <p class="price">{{product.value_course}} <small>{{product.value_offer_course}}</small> </p>
         </div>
         <div class="col-11 pb-4">
             <button class="btn btn-outline-success w-100">Agregar a carrito</button>
@@ -32,17 +33,8 @@
                 <div class="col-12">
                     <h4>Lo que aprenderás</h4>
                 </div>
-                <div class="col-12 col-md-6">
-                    <p><i class="fa-solid fa-check me-2"></i>Crear aplicaciones Web y Empresariales Java con competencias reales para conseguir oportunidades en el mercado laboral y profesional como programador Java</p>
-                </div>
-                <div class="col-12 col-md-6">
-                    <p><i class="fa-solid fa-check me-2"></i>Dominar los fundamentos de Java, conexión a base de datos, hasta la creación de aplicaciones Web con Servlets y JPS's. A este nivel se le conoce como Java Jr.</p>
-                </div>
-                <div class="col-12 col-md-6">
-                    <p><i class="fa-solid fa-check me-2"></i>Dominar las tecnologías Java Empresariales (Java EE o antes Java2EE) como EJB's, JPA, Web Services, JSF, PrimeFaces. A este nivel se le conoce como Java Sr.</p>
-                </div>
-                <div class="col-12 col-md-6">
-                    <p><i class="fa-solid fa-check me-2"></i>Al finalizar dominarán todos los temas anteriores, ya que cada nivel se apoya del anterior para obtener los niveles que el mercado laboral Java necesita.</p>
+                <div class="col-12 col-md-6" *ngFor="let tex of mesh">
+                    <p><i class="fa-solid fa-check me-2"></i>{{tex.texto}}</p>
                 </div>
             </div>
         </div>

@@ -27,4 +27,17 @@ export class ApiService {
         })
       )
   }
+
+  readProduct( table:string, select:string, linkTo:string, search:string ){
+    let headers = new HttpHeaders({
+      'Authorization':this.userTokenApi
+    });
+
+    return this.http.get(`${this.url}/${table}?select=${select}&linkTo=${linkTo}&search=${search}`,{headers:headers})
+      .pipe(
+        map((resp:any) => {
+          return resp;
+        })
+      )
+  }
 }

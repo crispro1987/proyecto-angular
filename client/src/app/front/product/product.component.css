@@ -11,6 +11,10 @@
     font-weight: 300;
 }
 
+.short{
+    padding:1.5em;
+}
+
 .content-prod{
     background-color:var(--grey3);
     padding: 2em 0 2em 0;

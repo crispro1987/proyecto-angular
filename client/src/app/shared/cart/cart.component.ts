@@ -13,7 +13,19 @@ export class CartComponent implements OnInit {
   constructor( private apiService : ApiService ) { }
 
   ngOnInit(): void {
-    this.apiService.cart.subscribe( data => this.navFix = !this.navFix);
+    this.apiService.cart.subscribe( data => {
+      
+      if(data.data){
+        console.log(data.data)
+        this.navFix = true;
+      }
+    });
+  }
+
+  handleChange(){
+    if(this.navFix){
+      this.navFix = !this.navFix;
+    }
   }
 
 }

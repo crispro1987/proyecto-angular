@@ -1,106 +1,62 @@
 <div class="container-fluid">
-    <div class="row p-0">
-        <div class="col-12 pad-home">
-            <div class="texto-home">
-                <h1>Haz que el aprendizaje te acompañe en tus vacaciones</h1>
-                <p>Ahora tienes cursos desde solo 8.900 CLP$. Consigue un 15 % de descuento adicional sobre el precio rebajado con el código GIFT15 hasta el 15 de diciembre.</p>
-            </div>
-            <img src="../../assets/img/hero.png" class="w-100 d-none d-md-block " alt="">
-            <img src="../../assets/img/hero-mov.png" class="w-100 d-md-none" alt="">
-        </div>
+  <div class="row p-0">
+    <div class="col-12 pad-home">
+      <div class="texto-home">
+        <h1>Haz que el aprendizaje te acompañe en tus vacaciones</h1>
+        <p>Ahora tienes cursos desde solo 8.900 CLP$. Consigue un 15 % de descuento adicional sobre el precio rebajado
+          con el código GIFT15 hasta el 15 de diciembre.</p>
+      </div>
+      <img src="../../assets/img/hero.png" class="w-100 d-none d-md-block " alt="">
+      <img src="../../assets/img/hero-mov.png" class="w-100 d-md-none" alt="">
     </div>
-    
-    <!-- SECCION SEARCH -->
+  </div>
 
-    <div class="row justify-content-center search">
-        <div class="col-10 col-md-3 align-self-center">
-            <h2>Qué te interesa aprender:</h2>
-        </div>
-        <div class="col-11 col-md-6">
-            <input type="text" placeholder="Buscar curso">
-        </div>
+  <!-- SECCION SEARCH -->
+
+  <div class="row justify-content-center search">
+    <div class="col-10 col-md-3 align-self-center">
+      <h2>Qué te interesa aprender:</h2>
+    </div>
+    <div class="col-11 col-md-6">
+      <form [formGroup]="searchForm">
+        <input type="text" 
+               placeholder="Buscar curso"
+               formControlName="search" >
+      </form>
+    </div>
+  </div>
+
+  <!-- SECCION CURSOS -->
+
+  <div class="row justify-content-center products">
+
+    <div class="col-12 col-md-3 box" *ngFor="let prod of courses | products:page:search; let i = index">
+      <mat-card class="example-card cpointer" routerLink="/producto/{{prod.url_course}}" (click)="scrollToTop()">
+        <mat-card-header>
+          <mat-card-title>{{prod.title_course}}</mat-card-title>
+          <mat-card-subtitle>{{prod.instructor_course}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{prod.image_course}}" alt="{{prod.alt_course}}">
+        <mat-card-content>
+          <p>
+            {{prod.short_course}}
+          </p>
+          <p class="price">{{prod.value_course}} <small>{{prod.value_offer_course}}</small> </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button class="btn btn-outline-success w-100 mt-2">Agregar a carrito</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
 
-    <!-- SECCION CURSOS -->
+  </div>
+  <div class="row justify-content-center mb-5 mt-5" *ngIf="courses.length != 0">
+    <div class="col-12 col-lg-6 text-center">
+        <button class="nmberPag me-2" (click)="previousPage()" [disabled]="pages2 == 1"><i class="fa-solid fa-angle-left"></i></button>
 
-    <div class="row justify-content-center products">
+        <span class="nmberPag2 me-2">Página {{pages2}} de {{pages}}</span>
 
-        <div class="col-12 col-md-3 box">
-            <mat-card class="example-card cpointer" routerLink="/producto/uno" (click)="scrollToTop()">
-                <mat-card-header>
-                  <mat-card-title>Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL</mat-card-title>
-                  <mat-card-subtitle>Juan Pablo De La Torre Valdes</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="../../assets/img/img1.png" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                  <p>
-                    En este curso aprenderás desde las bases de Python hacia temas más avanzados del lenguaje
-                  </p>
-                  <p class="price">$9900 <small>$10960</small> </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button class="btn btn-outline-success w-100 mt-2">Agregar a carrito</button>
-                </mat-card-actions>
-              </mat-card>
-        </div>
-
-        <div class="col-12 col-md-3 box">
-            <mat-card class="example-card">
-                <mat-card-header>
-                  <mat-card-title>Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL</mat-card-title>
-                  <mat-card-subtitle>Juan Pablo De La Torre Valdes</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="../../assets/img/img1.png" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                  <p>
-                    En este curso aprenderás desde las bases de Python hacia temas más avanzados del lenguaje
-                  </p>
-                  <p class="price">$9900 <small>$10960</small> </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button class="btn btn-outline-success w-100 mt-2">Agregar a carrito</button>
-                </mat-card-actions>
-              </mat-card>
-        </div>
-
-        <div class="col-12 col-md-3 box">
-            <mat-card class="example-card">
-                <mat-card-header>
-                  <mat-card-title>Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL</mat-card-title>
-                  <mat-card-subtitle>Juan Pablo De La Torre Valdes</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="../../assets/img/img1.png" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                  <p>
-                    En este curso aprenderás desde las bases de Python hacia temas más avanzados del lenguaje
-                  </p>
-                  <p class="price">$9900 <small>$10960</small> </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button class="btn btn-outline-success w-100 mt-2">Agregar a carrito</button>
-                </mat-card-actions>
-              </mat-card>
-        </div>
-
-        <div class="col-12 col-md-3 box">
-            <mat-card class="example-card">
-                <mat-card-header>
-                  <mat-card-title>Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL</mat-card-title>
-                  <mat-card-subtitle>Juan Pablo De La Torre Valdes</mat-card-subtitle>
-                </mat-card-header>
-                <img mat-card-image src="../../assets/img/img1.png" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                  <p>
-                    En este curso aprenderás desde las bases de Python hacia temas más avanzados del lenguaje
-                  </p>
-                  <p class="price">$9900 <small>$10960</small> </p>
-                </mat-card-content>
-                <mat-card-actions>
-                    <button class="btn btn-outline-success w-100 mt-2">Agregar a carrito</button>
-                </mat-card-actions>
-              </mat-card>
-        </div>
-
-        
+        <button class="nmberPag" (click)="nextPage()" [disabled]="pages == pages2"><i class="fa-solid fa-angle-right"></i></button>
     </div>
+</div>
 </div>

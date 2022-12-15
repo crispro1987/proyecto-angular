@@ -1,0 +1,18 @@
+.pad-about{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey3);
+}
+
+.box-about{
+    background:white;
+    border-radius:10px;
+    padding: 2em;
+}
+
+.box-about h2{
+    text-transform: initial;
+    letter-spacing: unset;
+}

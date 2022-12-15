@@ -16,3 +16,7 @@
     text-transform: initial;
     letter-spacing: unset;
 }
+
+.box-about p{
+    font-weight: 300;
+}

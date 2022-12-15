@@ -12,4 +12,8 @@ export class FrontComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
 }

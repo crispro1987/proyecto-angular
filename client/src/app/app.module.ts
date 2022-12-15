@@ -14,10 +14,12 @@ import { FrontModule } from './front/front.module';
 import { MaterialModule } from './material.module';
 import { InterceptorService } from './shared/services/interceptor.service';
 import { CartModule } from './shared/cart/cart.module';
+import { CartDirective } from './shared/directives/cart.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CartDirective
   ],
   imports: [
     BrowserModule,

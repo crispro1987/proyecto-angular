@@ -16,16 +16,11 @@ export class CartComponent implements OnInit {
     this.apiService.cart.subscribe( data => {
       
       if(data.data){
-        console.log(data.data)
         this.navFix = true;
+      }else{
+        this.navFix = false;
       }
     });
-  }
-
-  handleChange(){
-    if(this.navFix){
-      this.navFix = !this.navFix;
-    }
   }
 
 }

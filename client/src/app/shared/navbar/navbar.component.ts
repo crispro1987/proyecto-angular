@@ -8,6 +8,8 @@ import { ApiService } from '../services/api.service';
 })
 export class NavbarComponent implements OnInit {
 
+  public navFix: boolean = false;
+
   constructor( private apiService : ApiService ) { }
 
   ngOnInit(): void {
@@ -18,8 +20,14 @@ export class NavbarComponent implements OnInit {
   }
 
   openMenu(){
+    if(this.navFix){
+      this.navFix = false;
+    }else{
+      this.navFix = true;
+    }
+
     this.apiService.cart.emit({
-      data: true
+      data: this.navFix
     })
   }
 

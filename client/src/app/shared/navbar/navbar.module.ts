@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar.component';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { CartModule } from '../cart/cart.module';
 
 
 
@@ -9,7 +10,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
   declarations: [NavbarComponent],
   imports: [
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CartModule
   ],
   exports: [NavbarComponent]
 })

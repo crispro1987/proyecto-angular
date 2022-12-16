@@ -10,7 +10,7 @@ export class TypePipe implements PipeTransform {
       return null;
     }
 
-    let type = '';
+    let type;
 
     switch (value) {
       case "1":

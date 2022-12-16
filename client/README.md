@@ -1,27 +1,28 @@
-# Client
+# Proyecto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
+Proyecto de certificación Angular 11 Intensivo de Programadores Chile SPA. 
 
-## Development server
+## API REST
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+El Backend de este proyecto esta conectado a API REST creada en PHP bajo la siguiente url `https://api-angular.dosiscl.com` 
 
-## Code scaffolding
+## Cliente
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Este proyecto se generó con [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
+
+## Instalación
+
+Para instalar las dependencias del proyecto, ejecuta el siguiente comando `npm install`
+
+## Servidor de desarrollo
+
+Ejecute `ng serve` para iniciar servidor de desarrollo. Ir a siguiente url `http://localhost:4200/`. La aplicación se recargará automaticamente.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Ejecute `ng build` para compilar el proyecto. Los artefactos de compilación se almacenarán en el directorio `dist/`. Use el indicador `--prod` para compilación de producción.
 
-## Running unit tests
+## Ejecutar pruebas unitarias
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecute `ng test` para iniciar las pruebas unitarias a través de [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -8,11 +8,13 @@ import { FrontRoutingModule } from './front-routing.module';
 import { MaterialModule } from '../material.module';
 import { ProductsPipe } from './shared/filters/products.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ColorGreenDirective } from '../shared/directives/color-green.directive';
+import { TypePipe } from './shared/filters/type.pipe';
 
 
 
 @NgModule({
-  declarations: [FrontComponent, AboutComponent, ProductComponent, Error404Component, ProductsPipe],
+  declarations: [FrontComponent, AboutComponent, ProductComponent, Error404Component, ProductsPipe, ColorGreenDirective, TypePipe],
   imports: [
     CommonModule,
     FrontRoutingModule,

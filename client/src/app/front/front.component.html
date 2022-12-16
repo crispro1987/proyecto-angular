@@ -15,7 +15,7 @@
 
   <div class="row justify-content-center search">
     <div class="col-10 col-md-3 align-self-center text-center">
-      <h2>Qué lenguaje te interesa aprender:</h2>
+      <h2 appColorGreen>Qué lenguaje te interesa aprender:</h2>
     </div>
     <div class="col-11 col-md-6">
       <form [formGroup]="searchForm">
@@ -35,6 +35,7 @@
         <mat-card-header>
           <mat-card-title>{{prod.title_course}}</mat-card-title>
           <mat-card-subtitle>{{prod.instructor_course}}</mat-card-subtitle>
+          <div class="type" *ngIf="prod.type_course != 0">{{prod.type_course | type}}</div>
         </mat-card-header>
         <img mat-card-image src="{{prod.image_course}}" alt="{{prod.alt_course}}">
         <mat-card-content>

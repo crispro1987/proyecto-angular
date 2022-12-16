@@ -22,6 +22,6 @@ describe('ApiService', () => {
     });
     const req = httpTestingController.expectOne('https://api-angular.dosiscl.com/courses');
     expect(req.request.method).toBe('GET');
-    req.flush({ status: 200, total: 1, results: [{id_course: 1, title_course: 'titulo de curso', url_course: 'url-course', instructor_course: 'Instructor', short_course: 'descripcion corta', image_course: 'imagen', alt_course: 'alt imagen', value_course: 2, value_offer_course: 1, mesh_course: [{ texto: 'mesh'}], tag_course: 'tag de lenguajes', date_created_course: '2022-12-15', date_updated_course: ''}]})
+    req.flush({ status: 200, total: 1, results: [{id_course: 1, title_course: 'titulo de curso', url_course: 'url-course', instructor_course: 'Instructor', short_course: 'descripcion corta', image_course: 'imagen', alt_course: 'alt imagen', value_course: 2, value_offer_course: 1, type_course: 0, mesh_course: [{ texto: 'mesh'}], tag_course: 'tag de lenguajes', date_created_course: '2022-12-15', date_updated_course: ''}]})
   });
 });

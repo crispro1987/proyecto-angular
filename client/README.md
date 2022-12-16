@@ -4,7 +4,7 @@ Proyecto de certificación Angular 11 Intensivo de Programadores Chile SPA.
 
 ## API REST
 
-El Backend de este proyecto esta conectado a API REST creada en PHP bajo la siguiente url `https://api-angular.dosiscl.com` 
+El Backend de este proyecto esta conectado a API REST creada en PHP y base de datos en MySQL bajo la siguiente url `https://api-angular.dosiscl.com`
 
 ## Cliente
 
